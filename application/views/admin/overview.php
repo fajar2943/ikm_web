@@ -95,7 +95,11 @@
 								?>
 								<div class="mr-5"><?php echo $hasil ?> pengunjung hari ini</div>
 							</div>
-							<a class="card-footer text-white clearfix small z-1" href="<?php echo site_url('admin/pembelian') ?>">
+							<?php
+							$bulan = date('m');
+							$tahun = date('Y');
+							?>
+							<a class="card-footer text-white clearfix small z-1" href="<?php echo site_url('admin/laporan?filter=2&bulan=' . $bulan . '&tahun=' . $tahun) ?>">
 								<span class="float-left">Lihat Detail</span>
 								<span class="float-right">
 									<i class="fas fa-angle-right"></i>
